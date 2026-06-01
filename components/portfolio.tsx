@@ -2,27 +2,6 @@
 
 const TELEGRAM_URL = "https://t.me/nooo_design";
 
-const projects = [
-  {
-    id: "project-01",
-    number: "01",
-    title: "Название проекта",
-    description: "Краткое описание проекта и выполненной задачи.",
-  },
-  {
-    id: "project-02",
-    number: "02",
-    title: "Название проекта",
-    description: "Краткое описание проекта и выполненной задачи.",
-  },
-  {
-    id: "project-03",
-    number: "03",
-    title: "Название проекта",
-    description: "Краткое описание проекта и выполненной задачи.",
-  },
-];
-
 function TelegramLink({
   className = "",
   telegramIcon = false,
@@ -109,43 +88,47 @@ export function Portfolio() {
         id="projects"
         aria-labelledby="projects-heading"
       >
-        <div className="grid gap-8 border-t border-neutral-300 pt-5 dark:border-neutral-800 lg:grid-cols-12">
-          <p className="text-xs uppercase tracking-[0.16em] text-neutral-500 lg:col-span-4">
-            01 — Проекты
-          </p>
-          <h2
-            className="text-4xl font-semibold tracking-[-0.07em] sm:text-6xl lg:col-span-8 lg:text-7xl"
-            id="projects-heading"
-          >
-            Избранные проекты
-          </h2>
-        </div>
+        <h2
+          className="text-[clamp(3rem,7vw,7.5rem)] font-semibold uppercase leading-[0.92] tracking-[-0.07em]"
+          id="projects-heading"
+        >
+          Избранные проекты
+        </h2>
 
-        <div className="mt-14 grid gap-x-6 gap-y-14 sm:mt-20 lg:grid-cols-12 lg:gap-y-24">
-          {projects.map((project, index) => (
-            <article
-              className={`group lg:col-span-6 ${
-                index === 1 ? "lg:mt-32" : ""
-              }`}
-              key={project.id}
+        <article className="mt-14 grid gap-10 border-t border-neutral-300 pt-8 dark:border-neutral-800 sm:mt-20 sm:pt-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(320px,1.08fr)] lg:items-center lg:gap-16">
+          <div>
+            <div className="flex flex-wrap gap-2">
+              {["Startup", "SaaS", "Next.js", "Tailwind"].map((tag) => (
+                <span
+                  className="rounded-full bg-neutral-200 px-4 py-2 text-sm text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300"
+                  key={tag}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <h3 className="mt-8 text-4xl font-semibold tracking-[-0.06em] sm:text-5xl">
+              Название проекта
+            </h3>
+            <p className="mt-5 max-w-xl text-base leading-7 text-neutral-600 dark:text-neutral-400 sm:text-lg sm:leading-8">
+              Здесь будет краткое описание проекта. Временный текст-заполнитель
+              для настройки структуры карточки и визуальной иерархии.
+            </p>
+            <a
+              className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full border border-neutral-950 px-6 py-3 text-sm font-medium text-neutral-950 outline-offset-4 dark:border-neutral-100 dark:text-neutral-100"
+              href="#projects"
             >
-              <div className="flex aspect-[4/3] items-center justify-center border border-neutral-300 bg-neutral-200 text-xs uppercase tracking-[0.18em] text-neutral-500 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-600">
-                {project.id}
-              </div>
-              <div className="grid grid-cols-[3rem_1fr] gap-3 border-b border-neutral-300 pb-5 pt-5 dark:border-neutral-800">
-                <p className="text-xs text-neutral-500">{project.number}</p>
-                <div>
-                  <h3 className="text-xl font-semibold tracking-[-0.05em]">
-                    {project.title}
-                  </h3>
-                  <p className="mt-2 max-w-md text-sm leading-6 text-neutral-600 dark:text-neutral-400">
-                    {project.description}
-                  </p>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+              Смотреть проект
+            </a>
+          </div>
+
+          <div
+            aria-label="Место для изображения проекта"
+            className="aspect-square rounded-[20px] bg-neutral-200 dark:bg-neutral-900"
+            role="img"
+          />
+        </article>
       </section>
 
       <section
