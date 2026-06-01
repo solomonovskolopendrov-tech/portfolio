@@ -167,17 +167,11 @@ export function Portfolio() {
             className="flex min-h-48 items-center justify-center rounded-[28px] bg-neutral-900 px-6 py-8 text-xl font-medium text-neutral-100 outline-offset-4 hover:bg-neutral-800"
             href="#contacts"
           >
-            <svg
+            <img
               aria-hidden="true"
               className="mr-3 h-7 w-7 shrink-0"
-              fill="none"
-              viewBox="0 0 28 28"
-            >
-              <path
-                d="M3 5v18h4v-7.2c0-2 1.1-3.2 2.7-3.2 1.5 0 2.3 1 2.3 2.8V23h4v-8.3c0-3.8-2-5.8-5.2-5.8-1.6 0-2.9.6-3.8 1.8V5H3Zm14 0v18h4v-7.2c0-2 1.1-3.2 2.7-3.2.5 0 .9.1 1.3.3V9.1c-.2-.1-.5-.1-.8-.1-1.3 0-2.4.6-3.2 1.7V5h-4Z"
-                fill="currentColor"
-              />
-            </svg>
+              src="/headhunter-logo.svg"
+            />
             Резюме
           </a>
         </div>
