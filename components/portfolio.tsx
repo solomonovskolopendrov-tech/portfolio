@@ -150,17 +150,11 @@ export function Portfolio() {
             rel="noreferrer"
             target="_blank"
           >
-            <svg
+            <img
               aria-hidden="true"
-              className="mr-3 h-6 w-6 shrink-0"
-              fill="none"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="m17.4 3.5-2.3 12.1c-.2.9-.7 1.1-1.4.7l-3.5-2.6-1.7 1.6c-.2.2-.4.4-.8.4l.3-3.6 6.5-5.9c.3-.3-.1-.4-.4-.2l-8 5-3.5-1.1c-.8-.2-.8-.8.2-1.2l13.7-5.3c.6-.2 1.2.2.9 1.1Z"
-                fill="currentColor"
-              />
-            </svg>
+              className="mr-3 h-7 w-7 shrink-0"
+              src="/telegram-icon.svg"
+            />
             Телеграм
           </a>
           <a
