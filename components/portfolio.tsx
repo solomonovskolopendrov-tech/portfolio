@@ -97,10 +97,12 @@ export function Portfolio() {
               <p className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-neutral-400">
                 Portrait / 01
               </p>
-              <div className="mx-auto flex aspect-[4/5] w-[min(78%,28rem)] items-center justify-center border border-dashed border-neutral-300 bg-white/40 text-center">
-                <p className="max-w-28 text-[0.65rem] font-medium uppercase leading-5 tracking-[0.16em] text-neutral-400">
-                  Место для фотографии
-                </p>
+              <div className="mx-auto aspect-[4/5] w-[min(78%,28rem)] overflow-hidden">
+                <img
+                  alt="Портрет Михаила Соломонова"
+                  className="h-full w-full object-cover object-top"
+                  src="/portrait.webp"
+                />
               </div>
               <p className="text-right text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-neutral-400">
                 Moscow / Russia
