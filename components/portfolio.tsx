@@ -108,7 +108,7 @@ export function Portfolio() {
               ))}
             </div>
 
-            <h3 className="mt-8 text-4xl font-semibold tracking-[-0.06em] text-white sm:text-5xl">
+            <h3 className="mt-8 text-4xl font-semibold tracking-[-0.03em] text-white sm:text-5xl">
               Название проекта
             </h3>
             <p className="mt-5 max-w-xl text-base leading-7 text-neutral-400 sm:text-lg sm:leading-8">
