@@ -136,17 +136,14 @@ export function Portfolio() {
         id="contacts"
         aria-labelledby="contacts-heading"
       >
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-neutral-400">
-          Связаться со мной
-        </p>
         <h2
-          className="mt-5 text-[clamp(2.75rem,5vw,3.75rem)] font-bold uppercase leading-[0.92] tracking-[-0.04em]"
+          className="text-[clamp(2.75rem,5vw,3.75rem)] font-bold uppercase leading-[0.92] tracking-[-0.04em]"
           id="contacts-heading"
         >
-          Избранные проекты
+          Связаться со мной
         </h2>
 
-        <div className="mx-auto mt-14 grid max-w-4xl gap-4 sm:mt-20 sm:grid-cols-2">
+        <div className="mt-14 grid gap-4 sm:mt-20 sm:grid-cols-2">
           <a
             className="flex min-h-48 items-center justify-center rounded-[28px] bg-neutral-900 px-6 py-8 text-xl font-medium text-neutral-100 outline-offset-4 hover:bg-neutral-800"
             href={TELEGRAM_URL}
