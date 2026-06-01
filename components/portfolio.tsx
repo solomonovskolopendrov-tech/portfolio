@@ -70,24 +70,24 @@ export function Portfolio() {
           <div className="flex flex-col justify-between px-6 py-6 sm:px-10 sm:py-9 lg:px-14 lg:py-11 xl:px-16">
             <p className="text-sm font-bold tracking-[0.18em]">SOLOMONOV</p>
 
-            <div className="my-16 max-w-3xl lg:my-8">
+            <div className="my-10 max-w-3xl lg:my-4">
               <h1
-                className="text-[clamp(4.5rem,8vw,7.5rem)] font-bold leading-[0.9] tracking-[-0.04em]"
+                className="text-[clamp(3.75rem,6vw,6.5rem)] font-bold leading-[0.92] tracking-[-0.04em]"
                 id="hero-heading"
               >
                 Михаил
                 <br />
                 Соломонов
               </h1>
-              <p className="mt-8 text-sm font-semibold uppercase tracking-[0.17em] text-neutral-500 sm:text-base">
-                Веб-дизайнер <span aria-hidden="true">•</span> AI-оператор
+              <p className="mt-5 text-[clamp(1.75rem,2.4vw,2.5rem)] font-semibold leading-tight tracking-[-0.04em] text-neutral-950">
+                Веб-дизайнер &amp; AI-оператор
               </p>
-              <p className="mt-7 max-w-xl text-base leading-7 text-neutral-600 sm:text-lg sm:leading-8">
+              <p className="mt-3 max-w-xl text-lg leading-8 text-neutral-600 sm:text-xl sm:leading-8">
                 Если вы открыли эту страницу, вероятно, рассматриваете мою
                 кандидатуру. Здесь собраны избранные работы в области
                 веб-дизайна, визуального контента и AI-инструментов.
               </p>
-              <TelegramLink className="mt-9" telegramIcon />
+              <TelegramLink className="mt-6" telegramIcon />
             </div>
 
           </div>
