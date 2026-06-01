@@ -84,23 +84,23 @@ export function Portfolio() {
       </section>
 
       <section
-        className="px-5 py-24 sm:px-8 sm:py-32 lg:px-14 lg:py-40"
+        className="bg-[#0C0C0C] px-5 py-24 text-white sm:px-8 sm:py-32 lg:px-14 lg:py-40"
         id="projects"
         aria-labelledby="projects-heading"
       >
         <h2
-          className="text-[clamp(3rem,7vw,7.5rem)] font-semibold uppercase leading-[0.92] tracking-[-0.07em]"
+          className="text-[clamp(3.75rem,6vw,6.5rem)] font-bold uppercase leading-[0.92] tracking-[-0.04em]"
           id="projects-heading"
         >
           Избранные проекты
         </h2>
 
-        <article className="mt-14 grid gap-10 border-t border-neutral-300 pt-8 dark:border-neutral-800 sm:mt-20 sm:pt-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(320px,1.08fr)] lg:items-center lg:gap-16">
+        <article className="mt-14 grid gap-10 sm:mt-20 lg:grid-cols-[minmax(0,0.92fr)_minmax(320px,1.08fr)] lg:items-center lg:gap-16">
           <div>
             <div className="flex flex-wrap gap-2">
               {["Startup", "SaaS", "Next.js", "Tailwind"].map((tag) => (
                 <span
-                  className="rounded-full bg-neutral-200 px-4 py-2 text-sm text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300"
+                  className="rounded-full bg-neutral-900 px-4 py-2 text-sm text-neutral-300"
                   key={tag}
                 >
                   {tag}
@@ -108,15 +108,15 @@ export function Portfolio() {
               ))}
             </div>
 
-            <h3 className="mt-8 text-4xl font-semibold tracking-[-0.06em] sm:text-5xl">
+            <h3 className="mt-8 text-4xl font-semibold tracking-[-0.06em] text-white sm:text-5xl">
               Название проекта
             </h3>
-            <p className="mt-5 max-w-xl text-base leading-7 text-neutral-600 dark:text-neutral-400 sm:text-lg sm:leading-8">
+            <p className="mt-5 max-w-xl text-base leading-7 text-neutral-400 sm:text-lg sm:leading-8">
               Здесь будет краткое описание проекта. Временный текст-заполнитель
               для настройки структуры карточки и визуальной иерархии.
             </p>
             <a
-              className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full border border-neutral-950 px-6 py-3 text-sm font-medium text-neutral-950 outline-offset-4 dark:border-neutral-100 dark:text-neutral-100"
+              className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full border border-neutral-500 px-6 py-3 text-sm font-medium text-white outline-offset-4"
               href="#projects"
             >
               Смотреть проект
@@ -125,7 +125,7 @@ export function Portfolio() {
 
           <div
             aria-label="Место для изображения проекта"
-            className="aspect-square rounded-[20px] bg-neutral-200 dark:bg-neutral-900"
+            className="aspect-square rounded-[20px] bg-neutral-800"
             role="img"
           />
         </article>
