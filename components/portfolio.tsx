@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
 const TELEGRAM_URL = "https://t.me/nooo_design";
 
 const projects = [
@@ -25,7 +23,13 @@ const projects = [
   },
 ];
 
-function TelegramLink({ className = "" }: { className?: string }) {
+function TelegramLink({
+  className = "",
+  telegramIcon = false,
+}: {
+  className?: string;
+  telegramIcon?: boolean;
+}) {
   return (
     <a
       className={`inline-flex min-h-12 items-center justify-center rounded-full bg-neutral-950 px-6 py-3 text-sm font-medium text-white outline-offset-4 dark:bg-neutral-100 dark:text-neutral-950 ${className}`}
@@ -34,92 +38,79 @@ function TelegramLink({ className = "" }: { className?: string }) {
       rel="noreferrer"
     >
       Написать в Telegram
-      <span className="ml-3 text-base" aria-hidden="true">
-        ↗
-      </span>
+      {telegramIcon ? (
+        <svg
+          aria-hidden="true"
+          className="ml-3 h-4 w-4"
+          fill="none"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="m17.4 3.5-2.3 12.1c-.2.9-.7 1.1-1.4.7l-3.5-2.6-1.7 1.6c-.2.2-.4.4-.8.4l.3-3.6 6.5-5.9c.3-.3-.1-.4-.4-.2l-8 5-3.5-1.1c-.8-.2-.8-.8.2-1.2l13.7-5.3c.6-.2 1.2.2.9 1.1Z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : (
+        <span className="ml-3 text-base" aria-hidden="true">
+          ↗
+        </span>
+      )}
     </a>
   );
 }
 
-function ThemeToggle({
-  theme,
-  onToggle,
-}: {
-  theme: "light" | "dark";
-  onToggle: () => void;
-}) {
-  const isDark = theme === "dark";
-
-  return (
-    <button
-      className="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 text-neutral-900 dark:border-neutral-700 dark:text-neutral-100"
-      type="button"
-      onClick={onToggle}
-      aria-label={isDark ? "Включить светлую тему" : "Включить темную тему"}
-    >
-      <span aria-hidden="true">{isDark ? "☼" : "◐"}</span>
-    </button>
-  );
-}
-
 export function Portfolio() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
-
-  useEffect(() => {
-    const savedTheme = window.localStorage.getItem("portfolio-theme");
-    if (savedTheme === "dark") {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
-
-  function toggleTheme() {
-    const nextTheme = theme === "light" ? "dark" : "light";
-    setTheme(nextTheme);
-    document.documentElement.classList.toggle("dark", nextTheme === "dark");
-    window.localStorage.setItem("portfolio-theme", nextTheme);
-  }
-
   return (
     <main>
       <section
-        className="flex min-h-screen flex-col px-5 pb-8 pt-5 sm:px-8 lg:px-14 lg:pb-12 lg:pt-8"
+        className="min-h-screen bg-[#0C0C0C] p-5"
         aria-labelledby="hero-heading"
       >
-        <header className="flex items-center justify-between">
-          <p className="text-sm font-semibold tracking-[-0.02em]">
-            Имя Фамилия
-          </p>
-          <div className="flex items-center gap-5">
-            <nav className="hidden items-center gap-6 text-xs text-neutral-600 dark:text-neutral-400 sm:flex">
-              <a href="#projects">Проекты</a>
-              <a href="#contacts">Контакты</a>
-            </nav>
-            <ThemeToggle theme={theme} onToggle={toggleTheme} />
-          </div>
-        </header>
+        <div className="grid min-h-[calc(100vh-40px)] overflow-hidden bg-white text-neutral-950 lg:grid-cols-[minmax(0,1.12fr)_minmax(320px,0.88fr)]">
+          <div className="flex flex-col justify-between px-6 py-6 sm:px-10 sm:py-9 lg:px-14 lg:py-11 xl:px-16">
+            <p className="text-sm font-bold tracking-[0.18em]">SOLOMONOV</p>
 
-        <div className="flex flex-1 items-center py-24">
-          <div className="max-w-5xl">
-            <p className="mb-7 text-xs uppercase tracking-[0.16em] text-neutral-500 dark:text-neutral-400">
-              Портфолио дизайнера
-            </p>
-            <h1
-              className="max-w-5xl text-[clamp(3.3rem,10vw,9rem)] font-semibold leading-[0.93] tracking-[-0.085em]"
-              id="hero-heading"
-            >
-              Заголовок портфолио
-            </h1>
-            <p className="mt-8 max-w-xl text-base leading-7 text-neutral-600 dark:text-neutral-400 sm:text-lg">
-              Краткое описание специализации, подхода к работе и типов задач.
-            </p>
-            <TelegramLink className="mt-10" />
-          </div>
-        </div>
+            <div className="my-16 max-w-3xl lg:my-8">
+              <h1
+                className="text-[clamp(3.8rem,7.4vw,8.7rem)] font-semibold leading-[0.86] tracking-[-0.095em]"
+                id="hero-heading"
+              >
+                Михаил
+                <br />
+                Соломонов
+              </h1>
+              <p className="mt-8 text-sm font-semibold uppercase tracking-[0.17em] text-neutral-500 sm:text-base">
+                Веб-дизайнер <span aria-hidden="true">•</span> AI-оператор
+              </p>
+              <p className="mt-7 max-w-xl text-base leading-7 text-neutral-600 sm:text-lg sm:leading-8">
+                Если вы открыли эту страницу, вероятно, рассматриваете мою
+                кандидатуру. Здесь собраны избранные работы в области
+                веб-дизайна, визуального контента и AI-инструментов.
+              </p>
+              <TelegramLink className="mt-9" telegramIcon />
+            </div>
 
-        <div className="flex items-end justify-between border-t border-neutral-300 pt-4 text-xs uppercase tracking-[0.13em] text-neutral-500 dark:border-neutral-800 dark:text-neutral-500">
-          <span>Избранные работы</span>
-          <span>Прокрутите вниз</span>
+            <div className="flex items-end justify-between border-t border-neutral-200 pt-4 text-[0.65rem] font-medium uppercase tracking-[0.16em] text-neutral-400">
+              <span>Portfolio / 2026</span>
+              <span>Scroll down</span>
+            </div>
+          </div>
+
+          <div className="hidden p-5 pl-0 lg:block">
+            <div className="flex h-full min-h-0 flex-col justify-between bg-neutral-100 p-7">
+              <p className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-neutral-400">
+                Portrait / 01
+              </p>
+              <div className="mx-auto flex aspect-[4/5] w-[min(78%,28rem)] items-center justify-center border border-dashed border-neutral-300 bg-white/40 text-center">
+                <p className="max-w-28 text-[0.65rem] font-medium uppercase leading-5 tracking-[0.16em] text-neutral-400">
+                  Место для фотографии
+                </p>
+              </div>
+              <p className="text-right text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-neutral-400">
+                Moscow / Russia
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
