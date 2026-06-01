@@ -46,22 +46,22 @@ export function Portfolio() {
         aria-labelledby="hero-heading"
       >
         <div className="grid min-h-[calc(100vh-40px)] overflow-hidden rounded-[20px] bg-white text-neutral-950 lg:grid-cols-[minmax(0,1.12fr)_minmax(320px,0.88fr)]">
-          <div className="flex flex-col justify-between px-6 py-6 sm:px-10 sm:py-9 lg:px-14 lg:py-11 xl:px-16">
+          <div className="flex min-w-0 flex-col justify-between px-5 py-6 sm:px-10 sm:py-9 lg:px-14 lg:py-11 xl:px-16">
             <p className="text-sm font-bold tracking-[0.18em]">SOLOMONOV</p>
 
             <div className="my-10 max-w-3xl lg:my-4">
               <h1
-                className="text-[clamp(3.75rem,6vw,6.5rem)] font-bold leading-[0.92] tracking-[-0.04em]"
+                className="text-[clamp(2.5rem,12vw,3.75rem)] font-bold leading-[0.92] tracking-[-0.04em] sm:text-[clamp(3.75rem,6vw,6.5rem)]"
                 id="hero-heading"
               >
                 Михаил
                 <br />
                 Соломонов
               </h1>
-              <p className="mt-5 text-[clamp(1.75rem,2.4vw,2.5rem)] font-semibold leading-tight tracking-[-0.04em] text-neutral-950">
+              <p className="mt-5 text-[clamp(1.4rem,6.5vw,1.75rem)] font-semibold leading-tight tracking-[-0.04em] text-neutral-950 sm:text-[clamp(1.75rem,2.4vw,2.5rem)]">
                 Веб-дизайнер &amp; AI-оператор
               </p>
-              <p className="mt-3 max-w-xl text-lg leading-8 text-neutral-600 sm:text-xl sm:leading-8">
+              <p className="mt-3 max-w-xl text-base leading-7 text-neutral-600 sm:text-xl sm:leading-8">
                 Если вы открыли эту страницу, вероятно, рассматриваете мою
                 кандидатуру. Здесь собраны избранные работы в области
                 веб-дизайна, визуального контента и AI-инструментов.
@@ -89,14 +89,14 @@ export function Portfolio() {
         aria-labelledby="projects-heading"
       >
         <h2
-          className="text-[clamp(2.75rem,5vw,3.75rem)] font-bold uppercase leading-[0.92] tracking-[-0.04em]"
+          className="text-[clamp(2.75rem,5vw,3.75rem)] font-bold uppercase leading-[1.05] tracking-[-0.04em] sm:leading-[0.92]"
           id="projects-heading"
         >
           Избранные проекты
         </h2>
 
         <article className="mt-14 grid gap-10 sm:mt-20 lg:grid-cols-[minmax(0,0.92fr)_minmax(320px,1.08fr)] lg:items-center lg:gap-16">
-          <div>
+          <div className="order-2 lg:order-1">
             <div className="flex flex-wrap gap-2">
               {["Startup", "SaaS", "Next.js", "Tailwind"].map((tag) => (
                 <span
@@ -125,7 +125,7 @@ export function Portfolio() {
 
           <div
             aria-label="Место для изображения проекта"
-            className="aspect-square rounded-[20px] bg-neutral-800"
+            className="order-1 aspect-square rounded-[20px] bg-neutral-800 lg:order-2"
             role="img"
           />
         </article>
@@ -137,7 +137,7 @@ export function Portfolio() {
         aria-labelledby="contacts-heading"
       >
         <h2
-          className="text-[clamp(2.75rem,5vw,3.75rem)] font-bold uppercase leading-[0.92] tracking-[-0.04em]"
+          className="text-[clamp(2.75rem,5vw,3.75rem)] font-bold uppercase leading-[1.05] tracking-[-0.04em] sm:leading-[0.92]"
           id="contacts-heading"
         >
           Связаться со мной
