@@ -66,13 +66,13 @@ export function Portfolio() {
         className="min-h-screen bg-[#0C0C0C] p-5"
         aria-labelledby="hero-heading"
       >
-        <div className="grid min-h-[calc(100vh-40px)] overflow-hidden bg-white text-neutral-950 lg:grid-cols-[minmax(0,1.12fr)_minmax(320px,0.88fr)]">
+        <div className="grid min-h-[calc(100vh-40px)] overflow-hidden rounded-[20px] bg-white text-neutral-950 lg:grid-cols-[minmax(0,1.12fr)_minmax(320px,0.88fr)]">
           <div className="flex flex-col justify-between px-6 py-6 sm:px-10 sm:py-9 lg:px-14 lg:py-11 xl:px-16">
             <p className="text-sm font-bold tracking-[0.18em]">SOLOMONOV</p>
 
             <div className="my-16 max-w-3xl lg:my-8">
               <h1
-                className="text-[clamp(3.8rem,7.4vw,8.7rem)] font-semibold leading-[0.86] tracking-[-0.095em]"
+                className="text-[clamp(4.5rem,8vw,7.5rem)] font-bold leading-[0.9] tracking-[-0.04em]"
                 id="hero-heading"
               >
                 Михаил
@@ -90,10 +90,6 @@ export function Portfolio() {
               <TelegramLink className="mt-9" telegramIcon />
             </div>
 
-            <div className="flex items-end justify-between border-t border-neutral-200 pt-4 text-[0.65rem] font-medium uppercase tracking-[0.16em] text-neutral-400">
-              <span>Portfolio / 2026</span>
-              <span>Scroll down</span>
-            </div>
           </div>
 
           <div className="hidden p-5 pl-0 lg:block">
