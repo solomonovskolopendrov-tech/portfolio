@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background: #f7f7f5;
+  color: #111110;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.dark body {
+  background: #111110;
+  color: #f2f2ef;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
