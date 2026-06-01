@@ -92,22 +92,12 @@ export function Portfolio() {
 
           </div>
 
-          <div className="hidden p-5 pl-0 lg:block">
-            <div className="flex h-full min-h-0 flex-col justify-between bg-neutral-100 p-7">
-              <p className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-neutral-400">
-                Portrait / 01
-              </p>
-              <div className="mx-auto aspect-[4/5] w-[min(78%,28rem)] overflow-hidden">
-                <img
-                  alt="Портрет Михаила Соломонова"
-                  className="h-full w-full object-cover object-top"
-                  src="/portrait.webp"
-                />
-              </div>
-              <p className="text-right text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-neutral-400">
-                Moscow / Russia
-              </p>
-            </div>
+          <div className="hidden overflow-hidden rounded-[20px] lg:block">
+            <img
+              alt="Портрет Михаила Соломонова"
+              className="h-full w-full object-cover object-top"
+              src="/portrait.webp"
+            />
           </div>
         </div>
       </section>
