@@ -89,7 +89,7 @@ export function Portfolio() {
         aria-labelledby="projects-heading"
       >
         <h2
-          className="text-[clamp(3.75rem,6vw,6.5rem)] font-bold uppercase leading-[0.92] tracking-[-0.04em]"
+          className="text-[clamp(2.75rem,5vw,3.75rem)] font-bold uppercase leading-[0.92] tracking-[-0.04em]"
           id="projects-heading"
         >
           Избранные проекты
@@ -132,32 +132,36 @@ export function Portfolio() {
       </section>
 
       <section
-        className="bg-neutral-950 px-5 pb-7 pt-20 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-950 sm:px-8 sm:pt-28 lg:px-14 lg:pt-36"
+        className="bg-[#0C0C0C] px-5 pb-24 pt-20 text-white sm:px-8 sm:pb-32 sm:pt-28 lg:px-14 lg:pb-40 lg:pt-36"
         id="contacts"
         aria-labelledby="contacts-heading"
       >
-        <div className="grid gap-8 border-t border-neutral-700 pt-5 dark:border-neutral-300 lg:grid-cols-12">
-          <p className="text-xs uppercase tracking-[0.16em] text-neutral-400 dark:text-neutral-600 lg:col-span-4">
-            02 — Контакты
-          </p>
-          <div className="lg:col-span-8">
-            <h2
-              className="max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.075em] sm:text-7xl lg:text-8xl"
-              id="contacts-heading"
-            >
-              Обсудим ваш проект
-            </h2>
-            <p className="mt-8 max-w-lg text-base leading-7 text-neutral-400 dark:text-neutral-600">
-              Краткая контактная информация и приглашение обсудить задачу.
-            </p>
-            <TelegramLink className="mt-10 !bg-white !text-neutral-950 dark:!bg-neutral-950 dark:!text-white" />
-          </div>
-        </div>
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-neutral-400">
+          Связаться со мной
+        </p>
+        <h2
+          className="mt-5 text-[clamp(2.75rem,5vw,3.75rem)] font-bold uppercase leading-[0.92] tracking-[-0.04em]"
+          id="contacts-heading"
+        >
+          Избранные проекты
+        </h2>
 
-        <footer className="mt-24 flex flex-col gap-3 border-t border-neutral-700 pt-5 text-xs uppercase tracking-[0.13em] text-neutral-400 dark:border-neutral-300 dark:text-neutral-600 sm:mt-36 sm:flex-row sm:justify-between">
-          <span>Имя Фамилия</span>
-          <span>Портфолио дизайнера</span>
-        </footer>
+        <div className="mx-auto mt-14 grid max-w-4xl gap-4 sm:mt-20 sm:grid-cols-2">
+          <a
+            className="flex min-h-48 items-center justify-center rounded-[28px] bg-neutral-900 px-6 py-8 text-xl font-medium text-neutral-100 outline-offset-4 hover:bg-neutral-800"
+            href={TELEGRAM_URL}
+            rel="noreferrer"
+            target="_blank"
+          >
+            Телеграм
+          </a>
+          <a
+            className="flex min-h-48 items-center justify-center rounded-[28px] bg-neutral-900 px-6 py-8 text-xl font-medium text-neutral-100 outline-offset-4 hover:bg-neutral-800"
+            href="#contacts"
+          >
+            Резюме
+          </a>
+        </div>
       </section>
     </main>
   );
