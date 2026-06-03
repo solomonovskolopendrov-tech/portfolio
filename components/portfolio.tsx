@@ -123,11 +123,13 @@ export function Portfolio() {
             </a>
           </div>
 
-          <div
-            aria-label="Место для изображения проекта"
-            className="order-1 aspect-square rounded-[20px] bg-neutral-800 lg:order-2"
-            role="img"
-          />
+          <div className="order-1 flex aspect-square items-center justify-center overflow-hidden rounded-[20px] bg-white p-6 sm:p-8 lg:order-2">
+            <img
+              alt="Первый экран лендинга Ubit"
+              className="max-h-full max-w-full object-contain"
+              src="/project-preview.svg"
+            />
+          </div>
         </article>
       </section>
 
