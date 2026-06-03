@@ -126,7 +126,7 @@ export function Portfolio() {
           <div className="order-1 w-full rounded-[18px] bg-[#111213] p-6 sm:p-8 lg:order-2">
             <img
               alt="Первый экран лендинга Ubit"
-              className="aspect-[16/9] w-full rounded-xl object-cover object-top"
+              className="h-auto w-full rounded-xl object-contain"
               src="/project-preview.webp"
             />
           </div>
