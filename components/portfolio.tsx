@@ -95,12 +95,12 @@ export function Portfolio() {
           Избранные проекты
         </h2>
 
-        <article className="mt-14 grid gap-10 sm:mt-20 lg:grid-cols-[minmax(0,0.92fr)_minmax(320px,1.08fr)] lg:items-center lg:gap-16">
+        <article className="mt-14 grid gap-10 sm:mt-20 lg:grid-cols-[minmax(0,35%)_minmax(0,65%)] lg:items-start lg:gap-12 xl:gap-14">
           <div className="order-2 lg:order-1">
-            <div className="flex flex-wrap gap-2">
+            <div className="mb-4 flex flex-wrap gap-2">
               {["Startup", "SaaS", "Next.js", "Tailwind"].map((tag) => (
                 <span
-                  className="rounded-full bg-neutral-900 px-4 py-2 text-sm text-neutral-300"
+                  className="rounded-full bg-neutral-900 px-3 py-1.5 text-xs text-neutral-300"
                   key={tag}
                 >
                   {tag}
@@ -108,26 +108,26 @@ export function Portfolio() {
               ))}
             </div>
 
-            <h3 className="mt-8 text-4xl font-semibold tracking-[-0.03em] text-white sm:text-5xl">
+            <h3 className="text-[2rem] font-semibold leading-tight tracking-[0.01em] text-white sm:text-[2.25rem] lg:text-[2.5rem]">
               Название проекта
             </h3>
-            <p className="mt-5 max-w-xl text-base leading-7 text-neutral-400 sm:text-lg sm:leading-8">
+            <p className="mt-5 max-w-[22rem] text-sm leading-6 text-neutral-400 sm:text-base sm:leading-7">
               Здесь будет краткое описание проекта. Временный текст-заполнитель
               для настройки структуры карточки и визуальной иерархии.
             </p>
             <a
-              className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full border border-neutral-500 px-6 py-3 text-sm font-medium text-white outline-offset-4"
+              className="mt-3 inline-flex min-h-12 items-center justify-center rounded-full border border-neutral-500 px-6 py-3 text-sm font-medium text-white outline-offset-4"
               href="#projects"
             >
               Смотреть проект
             </a>
           </div>
 
-          <div className="order-1 flex aspect-square items-center justify-center overflow-hidden rounded-[20px] bg-white p-6 sm:p-8 lg:order-2">
+          <div className="order-1 w-full rounded-[18px] bg-[#111213] p-6 sm:p-8 lg:order-2">
             <img
               alt="Первый экран лендинга Ubit"
-              className="max-h-full max-w-full object-contain"
-              src="/project-preview.svg"
+              className="aspect-[16/9] w-full rounded-xl object-cover object-top"
+              src="/project-preview.webp"
             />
           </div>
         </article>
