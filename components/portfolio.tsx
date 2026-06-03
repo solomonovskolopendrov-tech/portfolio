@@ -75,8 +75,8 @@ export function Portfolio() {
             <div className="h-full overflow-hidden rounded-[20px]">
               <img
                 alt="Портрет Михаила Соломонова"
-                className="h-full w-full rounded-[20px] object-cover object-top"
-                src="/portrait.webp"
+                className="h-full w-full rounded-[20px] object-contain object-center"
+                src="/hero-photo.webp"
               />
             </div>
           </div>
