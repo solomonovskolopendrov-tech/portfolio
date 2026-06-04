@@ -49,31 +49,31 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    tags: ["Startup", "SaaS", "Next.js", "Tailwind"],
-    title: "Название проекта",
+    tags: ["mining", "landing", "ux-ui", "fullstack"],
+    title: "Ubit",
     description:
-      "Здесь будет краткое описание проекта. Временный текст-заполнитель для настройки структуры карточки и визуальной иерархии.",
+      "Исследовал ЦА и конкурентов, сформировал структуру и тексты, спроектировал UX и визуал, курировал вёрстку и довёл проект до релиза.",
     image: "/project-preview.webp",
     imageAlt: "Первый экран лендинга Ubit",
     href: "http://site-64643.taptop.site/",
   },
   {
-    tags: ["Startup", "AI", "Web App"],
-    title: "Название проекта",
+    tags: ["edtech", "landing", "ux-ui", "ai"],
+    title: "Syng | Синергия",
     description:
-      "Здесь будет краткое описание проекта. Временный текст-заполнитель для настройки структуры карточки и визуальной иерархии.",
+      "Собрал лендинг и креативы, разработал иллюстративный стиль с персонажами и культурными отсылками, на их основе выстроил масштабируемую систему иллюстраций с единым визуальным языком через AI, довёл проект до запуска.",
     image: "/project-case-2.webp",
     imageAlt: "Превью второго проекта",
-    href: "http://site-64643.taptop.site/",
+    href: "https://english.synergy.ru/sinergiya_probnyj_lesson",
   },
   {
-    tags: ["SaaS", "Dashboard", "UX/UI"],
-    title: "Название проекта",
+    tags: ["edtech", "landing", "ux-ui", "illustration"],
+    title: "Synergy Kids | Soft Skills",
     description:
-      "Здесь будет краткое описание проекта. Временный текст-заполнитель для настройки структуры карточки и визуальной иерархии.",
+      "Собрал лендинг для родителей, разработал иллюстративный стиль с гиперболизацией проблемных состояний и систему его воспроизводства, довёл проект до запуска.",
     image: "/project-case-3.webp",
     imageAlt: "Превью третьего проекта",
-    href: "http://site-64643.taptop.site/",
+    href: "https://softskills.synergykids.ru/diagnostics",
   },
 ];
 
@@ -102,7 +102,7 @@ function ProjectCard({ project }: { project: Project }) {
           className="group inline-flex min-h-12 items-center justify-center rounded-full border border-neutral-500 bg-transparent px-6 py-3 text-sm font-medium text-white outline-offset-4 transition-colors duration-300 hover:bg-white hover:text-black"
           href={project.href}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           Смотреть проект
           <span
