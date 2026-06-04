@@ -79,7 +79,7 @@ const PROJECTS: Project[] = [
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="grid gap-10 lg:grid-cols-[minmax(0,35%)_minmax(0,65%)] lg:items-start lg:gap-12 xl:gap-14">
+    <article className="grid gap-6 lg:grid-cols-[minmax(0,35%)_minmax(0,65%)] lg:items-start lg:gap-12 xl:gap-14">
       <div className="order-2 flex flex-col items-start gap-5 lg:order-1">
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
