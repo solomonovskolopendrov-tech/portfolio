@@ -75,6 +75,15 @@ const PROJECTS: Project[] = [
     imageAlt: "Превью третьего проекта",
     href: "https://softskills.synergykids.ru/diagnostics",
   },
+  {
+    tags: ["real estate", "landing", "ux-ui", "premium"],
+    title: "Mantera Residence",
+    description:
+      "Провёл исследование ЦА и конкурентов, на его основе выстроил структуру и подачу продукта, написал тексты, реализовал UX и визуал лендинга, довёл проект до запуска.",
+    image: "/project-case-4.webp",
+    imageAlt: "Превью проекта Mantera Residence",
+    href: "/MANTERA%20RESIDENCE.pdf",
+  },
 ];
 
 function ProjectCard({ project }: { project: Project }) {
