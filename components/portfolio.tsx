@@ -114,7 +114,7 @@ function ProjectCard({ project }: { project: Project }) {
         </a>
       </div>
 
-      <div className="order-1 w-full rounded-[18px] bg-[#111213] p-6 sm:p-8 lg:order-2">
+      <div className="order-1 w-full rounded-[18px] bg-[#111213] p-6 sm:p-8 lg:order-2 lg:w-[106%] lg:justify-self-end">
         <img
           alt={project.imageAlt}
           className="h-auto w-full rounded-xl object-contain"
