@@ -72,10 +72,10 @@ export function Portfolio() {
           </div>
 
           <div className="hidden py-6 pr-6 sm:py-9 sm:pr-10 lg:block lg:py-11 lg:pr-14 xl:pr-16">
-            <div className="h-full overflow-hidden rounded-[20px]">
+            <div className="flex h-full items-center overflow-hidden rounded-[20px]">
               <img
                 alt="Портрет Михаила Соломонова"
-                className="h-full w-full rounded-[20px] object-contain object-center"
+                className="block h-auto w-full rounded-[20px]"
                 src="/hero-photo.webp"
               />
             </div>
