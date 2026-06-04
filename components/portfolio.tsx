@@ -38,6 +38,93 @@ function TelegramLink({
   );
 }
 
+type Project = {
+  tags: string[];
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  href: string;
+};
+
+const PROJECTS: Project[] = [
+  {
+    tags: ["Startup", "SaaS", "Next.js", "Tailwind"],
+    title: "Название проекта",
+    description:
+      "Здесь будет краткое описание проекта. Временный текст-заполнитель для настройки структуры карточки и визуальной иерархии.",
+    image: "/project-preview.webp",
+    imageAlt: "Первый экран лендинга Ubit",
+    href: "http://site-64643.taptop.site/",
+  },
+  {
+    tags: ["Startup", "AI", "Web App"],
+    title: "Название проекта",
+    description:
+      "Здесь будет краткое описание проекта. Временный текст-заполнитель для настройки структуры карточки и визуальной иерархии.",
+    image: "/project-case-2.webp",
+    imageAlt: "Превью второго проекта",
+    href: "http://site-64643.taptop.site/",
+  },
+  {
+    tags: ["SaaS", "Dashboard", "UX/UI"],
+    title: "Название проекта",
+    description:
+      "Здесь будет краткое описание проекта. Временный текст-заполнитель для настройки структуры карточки и визуальной иерархии.",
+    image: "/project-case-3.webp",
+    imageAlt: "Превью третьего проекта",
+    href: "http://site-64643.taptop.site/",
+  },
+];
+
+function ProjectCard({ project }: { project: Project }) {
+  return (
+    <article className="grid gap-10 lg:grid-cols-[minmax(0,35%)_minmax(0,65%)] lg:items-start lg:gap-12 xl:gap-14">
+      <div className="order-2 flex flex-col items-start gap-5 lg:order-1">
+        <div className="flex flex-wrap gap-2">
+          {project.tags.map((tag) => (
+            <span
+              className="rounded-full bg-neutral-900 px-3 py-1.5 text-xs text-neutral-300"
+              key={tag}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <h3 className="text-[2rem] font-semibold leading-tight tracking-[0.01em] text-white sm:text-[2.25rem] lg:text-[2.5rem]">
+          {project.title}
+        </h3>
+        <p className="max-w-[22rem] text-sm leading-6 text-neutral-400 sm:text-base sm:leading-7">
+          {project.description}
+        </p>
+        <a
+          className="group inline-flex min-h-12 items-center justify-center rounded-full border border-neutral-500 bg-transparent px-6 py-3 text-sm font-medium text-white outline-offset-4 transition-colors duration-300 hover:bg-white hover:text-black"
+          href={project.href}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Смотреть проект
+          <span
+            className="ml-3 inline-block transition-all duration-[250ms] ease-[ease] group-hover:-rotate-45"
+            aria-hidden="true"
+          >
+            →
+          </span>
+        </a>
+      </div>
+
+      <div className="order-1 w-full rounded-[18px] bg-[#111213] p-6 sm:p-8 lg:order-2">
+        <img
+          alt={project.imageAlt}
+          className="h-auto w-full rounded-xl object-contain"
+          src={project.image}
+        />
+      </div>
+    </article>
+  );
+}
+
 export function Portfolio() {
   return (
     <main>
@@ -95,50 +182,11 @@ export function Portfolio() {
           Избранные проекты
         </h2>
 
-        <article className="mt-14 grid gap-10 sm:mt-20 lg:grid-cols-[minmax(0,35%)_minmax(0,65%)] lg:items-start lg:gap-12 xl:gap-14">
-          <div className="order-2 flex flex-col items-start gap-5 lg:order-1">
-            <div className="flex flex-wrap gap-2">
-              {["Startup", "SaaS", "Next.js", "Tailwind"].map((tag) => (
-                <span
-                  className="rounded-full bg-neutral-900 px-3 py-1.5 text-xs text-neutral-300"
-                  key={tag}
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            <h3 className="text-[2rem] font-semibold leading-tight tracking-[0.01em] text-white sm:text-[2.25rem] lg:text-[2.5rem]">
-              Название проекта
-            </h3>
-            <p className="max-w-[22rem] text-sm leading-6 text-neutral-400 sm:text-base sm:leading-7">
-              Здесь будет краткое описание проекта. Временный текст-заполнитель
-              для настройки структуры карточки и визуальной иерархии.
-            </p>
-            <a
-              className="group inline-flex min-h-12 items-center justify-center rounded-full border border-neutral-500 bg-transparent px-6 py-3 text-sm font-medium text-white outline-offset-4 transition-colors duration-300 hover:bg-white hover:text-black"
-              href="http://site-64643.taptop.site/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Смотреть проект
-              <span
-                className="ml-3 inline-block transition-all duration-[250ms] ease-[ease] group-hover:-rotate-45"
-                aria-hidden="true"
-              >
-                →
-              </span>
-            </a>
-          </div>
-
-          <div className="order-1 w-full rounded-[18px] bg-[#111213] p-6 sm:p-8 lg:order-2">
-            <img
-              alt="Первый экран лендинга Ubit"
-              className="h-auto w-full rounded-xl object-contain"
-              src="/project-preview.webp"
-            />
-          </div>
-        </article>
+        <div className="mt-14 grid gap-14 sm:mt-20 sm:gap-20">
+          {PROJECTS.map((project) => (
+            <ProjectCard key={project.image} project={project} />
+          ))}
+        </div>
       </section>
 
       <section
