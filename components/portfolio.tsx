@@ -123,7 +123,7 @@ export function Portfolio() {
             >
               Смотреть проект
               <span
-                className="ml-3 inline-block transition-transform duration-300 group-hover:rotate-45"
+                className="ml-3 inline-block transition-all duration-[250ms] ease-[ease] group-hover:-rotate-45"
                 aria-hidden="true"
               >
                 →
