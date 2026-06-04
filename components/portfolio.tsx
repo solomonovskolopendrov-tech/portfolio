@@ -68,7 +68,7 @@ const PROJECTS: Project[] = [
   },
   {
     tags: ["edtech", "landing", "ux-ui", "illustration"],
-    title: "Synergy Kids | Soft Skills",
+    title: "Synergy Kids",
     description:
       "Собрал лендинг для родителей, разработал иллюстративный стиль с гиперболизацией проблемных состояний и систему его воспроизводства, довёл проект до запуска.",
     image: "/project-case-3.webp",
