@@ -95,6 +95,15 @@ const PROJECTS: Project[] = [
     href: "https://www.instagram.com/egosedated/",
     buttonLabel: "смотреть в нельзяграмме",
   },
+  {
+    tags: ["visual", "ai", "posters", "experiments"],
+    title: "Визуальные эксперименты",
+    description:
+      "Исследовал визуальные подходы через серию плакатов: композиция, форма, контраст и работа с образами с использованием AI.",
+    image: "/project-case-6.webp",
+    imageAlt: "Превью проекта Визуальные эксперименты",
+    href: "/Visual%20Experiments.pdf",
+  },
 ];
 
 function ProjectCard({ project }: { project: Project }) {
