@@ -45,6 +45,7 @@ type Project = {
   image: string;
   imageAlt: string;
   href: string;
+  buttonLabel?: string;
 };
 
 const PROJECTS: Project[] = [
@@ -84,6 +85,16 @@ const PROJECTS: Project[] = [
     imageAlt: "Превью проекта Mantera Residence",
     href: "/MANTERA%20RESIDENCE.pdf",
   },
+  {
+    tags: ["ai", "video", "storytelling", "direction"],
+    title: "EGO SEDATED",
+    description:
+      "Разработал и реализовал экспериментальную серию AI-видео: идея, сценарий, раскадровка, генерация визуала и монтаж, с акцентом на единый визуальный язык и атмосферу.",
+    image: "/project-case-5.webp",
+    imageAlt: "Превью проекта EGO SEDATED",
+    href: "https://www.instagram.com/egosedated/",
+    buttonLabel: "смотреть в нельзяграмме",
+  },
 ];
 
 function ProjectCard({ project }: { project: Project }) {
@@ -113,7 +124,7 @@ function ProjectCard({ project }: { project: Project }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Смотреть проект
+          {project.buttonLabel ?? "Смотреть проект"}
           <span
             className="ml-3 inline-block transition-all duration-[250ms] ease-[ease] group-hover:-rotate-45"
             aria-hidden="true"
