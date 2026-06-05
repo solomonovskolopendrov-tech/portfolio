@@ -93,7 +93,7 @@ const PROJECTS: Project[] = [
     image: "/project-case-5.webp",
     imageAlt: "Превью проекта EGO SEDATED",
     href: "https://www.instagram.com/egosedated/",
-    buttonLabel: "смотреть в нельзяграмме",
+    buttonLabel: "Смотреть в нельзяграмме",
   },
   {
     tags: ["visual", "ai", "posters", "experiments"],
@@ -246,7 +246,9 @@ export function Portfolio() {
           </a>
           <a
             className="flex min-h-48 items-center justify-center rounded-[28px] bg-neutral-900 px-6 py-8 text-xl font-medium text-neutral-100 outline-offset-4 hover:bg-neutral-800"
-            href="#contacts"
+            href="https://hh.ru/resume/f6f21aa6ff0fe41d6e0039ed1f365945396c6b?customDomain=1&overRideDomainAreaId=1"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <img
               aria-hidden="true"
