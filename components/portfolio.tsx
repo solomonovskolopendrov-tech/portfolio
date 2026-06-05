@@ -87,7 +87,7 @@ const PROJECTS: Project[] = [
   },
   {
     tags: ["ai", "video", "storytelling", "direction"],
-    title: "EGO SEDATED",
+    title: "Ego sedated",
     description:
       "Разработал и реализовал экспериментальную серию AI-видео: идея, сценарий, раскадровка, генерация визуала и монтаж, с акцентом на единый визуальный язык и атмосферу.",
     image: "/project-case-5.webp",
@@ -121,7 +121,7 @@ function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
 
-        <h3 className="text-[2rem] font-semibold leading-tight tracking-[0.01em] text-white sm:text-[2.25rem] lg:text-[2.5rem]">
+        <h3 className="text-[2rem] font-semibold leading-[1.05] tracking-[0.01em] text-white sm:text-[2.25rem] lg:text-[2.5rem]">
           {project.title}
         </h3>
         <p className="max-w-[22rem] text-sm leading-6 text-neutral-400 sm:text-base sm:leading-7">
