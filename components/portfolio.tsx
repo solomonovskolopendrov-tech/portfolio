@@ -11,7 +11,7 @@ function TelegramLink({
 }) {
   return (
     <a
-      className={`inline-flex min-h-12 items-center justify-center rounded-full bg-neutral-950 px-6 py-3 text-sm font-medium text-white outline-offset-4 dark:bg-neutral-100 dark:text-neutral-950 ${className}`}
+      className={`inline-flex min-h-12 items-center justify-center rounded-full border border-transparent bg-neutral-950 px-6 py-3 text-sm font-medium text-white outline-offset-4 transition-colors duration-300 hover:border-black hover:bg-white hover:text-black dark:bg-neutral-100 dark:text-neutral-950 ${className}`}
       href={TELEGRAM_URL}
       target="_blank"
       rel="noreferrer"
