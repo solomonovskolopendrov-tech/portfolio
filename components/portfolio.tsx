@@ -1,6 +1,6 @@
 "use client";
 
-const TELEGRAM_URL = "https://t.me/nooo_design";
+const TELEGRAM_URL = "https://telegram.me/nooo_design";
 
 function TelegramLink({
   className = "",
